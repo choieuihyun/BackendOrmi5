@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- radio는 name이 같으면 택1 -->
+    <form action="" method="get">
+        <input type="radio" name="성별" value="남">
+        <input type="radio" name="성별" value="여">
+        <button>제출</button>
+    </form>
+
+    <!-- 문제: 빨간색, 노란색, 파란색 color 중 좋아하는 color 1개만 선택하기 -->
+    <form action="" method="get">
+        <label for="radioRed">빨간색</label>
+        <input type="radio" name="color" value="red" id="radioRed">
+        <label for="radioYellow">노란색</label>
+        <input type="radio" name="color" value="yellow" id="radioYellow">
+        <label for="radioBlue">파란색</label>
+        <input type="radio" name="color" value="blue" id="radioBlue">
+        <button>제출</button>
+    </form>
+
+</body>
+</html>

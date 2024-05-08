@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+
+    <!--
+        form: 사용자가 입력한 데이터를 서버로 보내기 위한 양식
+        input: 사용자가 입력하는 부분
+        button: 사용자가 입력한 데이터를 서버로 보내는 버튼
+    -->
+
+    <!--
+
+    action : 내 요청을 처리할 주소, 비어있으면 나 자신
+    method : 요청을 무엇으로 보낼지(택배, 인편 etc..)
+
+    get과 post는 둘 다 검색 가능함.
+
+    form에 get과 post밖에 없는이유?
+    form의 태생: form은 기본적으로 정보를 '제공'하는 역할을 합니다.
+    따라서 정보를 제공하는 form에서 delete를 하는 것이 form의 목적에 맞지 않습니다.
+    https://www.books.weniv.co.kr/basecamp-network/chapter06/06-1 맨 아래 부분 참고.
+    노션 강의 자료를 보는 것을 잊지마라.
+
+    get 방식은 어디에 데이터를 전송하냐? : url
+    get
+    post
+    
+     -->
+    <form action="" method="get">
+        <input type="text" name="id">
+        <input type="password" name="pw">
+        <button>로그인</button>
+    </form>
+
+    <!-- 이런 형태로 많이 사용합니다. -->
+    <form action="" method="get">
+        <input type="text" name="q">
+        <button>검색</button>
+    </form>
+    <!--
+        로그인 버튼을 누르니 아래와 같이 주소창에 나타남
+        HtmlCss/001.html?id=aaa&pw=bbb
+
+        처리 절차
+        1. 로그인 버튼을 누르게 되면 브라우저에서 각각에 input의 name값과 value값을 가져와서 아래 패킷 값을 만든다.
+        key1=value1&key2=value2 이런 키-값 쌍으로 들어감.
+
+        GET /001.html?id=aaa&pw=bbb HTTP/1.1              # 요청라인
+        user-agent: MSIE 6.0; Windows NT 5.0  # 헤더
+        accept: text/html; */*
+        cookie: name = value
+        referer: http://www.naver.com
+        host: www.paullab.co.kr
+
+        2. 이 패킷을 host로 보내서 처리합니다.
+
+        3. 그런데 처리해야 할 사람이 나 자신이다. 그래서 나 자신에게 HtmlCss/001.html?id=aaa&pw=bbb이 뜨게 된다.
+
+        ----------------------------------------------------------------------------------------------------------------
+
+        GET 방식의 장점과 단점
+        1. URL에 데이터가 노출되어 보안에 취약합니다. ex) 카페에서 자리를 비웠는데 누가 훔쳐보면 어떡함? URL은 기본적으로 도청이 된다.
+
+        2. 그래서 노출이 되어도 되는 데이터들은 GET으로 하고 보통 검색은 GET으로 이루어짐.
+
+        3. 그렇다면 노출이 되어도 좋은 데이터는 무엇일까? 그냥 다 post로 하면 안될까?
+        'https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=weniv'처럼 공유했을 때
+        다른사람도 이 URL로 바로 접속해서 같은 결과를 볼 수 있습니다.
+
+        4. 그러나 검색 키워드를 GET으로 만드는 것이 절대적이진 않다. 예를 들어 정부의 부동산 서비스 같은 경우 검색 키워드도 POST로 처리.
+           보안 상 데이터를 숨겨야 하는 경우이다.
+
+        5. 그럼 다 post로 해도 되는데 왜 get을 쓰는거야? : url 공유가 필요하기 때문.
+
+        6. url 공유는 하고 싶으되 그 안의 데이터가 보여지기를 원치 않으면 post를 쓰는 경우가 많다. 데이터 생성에 post 이런식으로 외우면 안됨. 안좋은 접근임.
+
+    -->
+
+</body>
+</html>

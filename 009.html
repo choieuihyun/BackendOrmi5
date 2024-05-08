@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        신뢰할 수 있는 데이터인지 항상 검증해야한다.
+        아래같이 required 넣으면 반드시 입력해야 하지만 개발자 소스에서 코드 보고 지워버리면 비밀번호 안써도 뚫림.
+        그래서 사용자가 입력한 데이터는 믿을 수 없음.
+        프론트엔드에서도 검증하고 백엔드에서도 검증해야함.
+    -->
+    <form action="" method="get">
+
+        아이디
+        <input type="text" name="id" required>
+        패스워드
+        <input type="password" name="password" required>
+        <button>로그인</button>
+
+    </form>
+
+</body>
+</html>
