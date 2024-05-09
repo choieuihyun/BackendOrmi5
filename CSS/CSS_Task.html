@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+
+            width: 350px;
+            height: 140px;
+            border: 1px #DBDBDB solid;
+            border-radius: 4px;
+
+        }
+
+        section h2 {
+
+            width: 215px;
+            height: 15px;
+            margin: 19px 116px 16px 16px;
+            font-size: 12px;
+
+        }
+
+        /* 로그인 div */
+
+        div.login_div {
+
+            width: 318px;
+            height: 40px;
+            margin: 16px 16px 16px 16px; /* p와 마진 중첩 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #711BFF;
+            border-radius: 4px;
+
+        }
+
+        div.login_div img {
+
+            width: 64px;
+            height: 18px;
+            margin-top: 11px;
+            margin-bottom: 11px;
+
+        }
+
+        div.login_div span {
+
+            width: 34px;
+            height: 15px;
+            margin-top: 14px;
+            margin-bottom: 11px;
+            font-size: 12px;
+            color: white;
+
+        }
+
+        /* 아이디, 비밀번호 찾기 div */
+        div.id_pw_div {
+
+            width: 133px;
+            height: 16px;
+            margin: 16px 120px 18px 16px;
+            border: 0;
+
+        }
+
+        div.id_pw_div span {
+
+            font-size: 12px;
+
+        }
+
+        div img.icon_lock {
+
+            width: 16px;
+            height: 16px;
+            vertical-align: bottom;
+
+        }
+
+        /* 회원가입 div */
+        div.signup_div {
+
+            width: 65px;
+            height: 16px;
+            margin: 2px 16px 18px 120px;
+            border: 0;
+
+        }
+
+        div img.icon_user {
+
+            width: 16px;
+            height: 16px;
+
+        }
+
+        div.signup_div span {
+
+            font-size: 12px;
+
+        }
+
+
+        div.inner_div img {
+            align-content: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <section>
+
+        <h2 class="inner_p">더 편리해진 위니브에 오신 것을 환영합니다.</h2>
+
+        <div class="login_div">
+
+            <img src="weniv-logo.png" alt="위니브 로고">
+            <span>로그인</span>
+
+        </div>
+
+        <div class="id_pw_div">
+
+            <img src="icon-lock.svg" alt="자물쇠 모양 아이콘" class="icon_lock">
+            <span>아이디</span>
+            <span>|</span>
+            <span>비밀번호 찾기</span>
+
+        </div>
+
+        <div class="signup_div">
+
+            <img src="icon-user.png" alt="사람 모양 아이콘" class="icon_user">
+            <span>회원가입</span>
+
+        </div>
+
+
+    </section>
+
+</body>
+</html>
