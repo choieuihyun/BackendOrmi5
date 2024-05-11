@@ -1,0 +1,215 @@
+@font-face {
+    font-family: Gmarket Sans;
+    src: url("fonts/GmarketSansTTFMedium.ttf")
+}
+
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #711BFF;
+    color: white;
+    font-family: "Gmarket Sans";
+
+}
+
+
+.logo_timer {
+
+    position: absolute;
+    margin-top: 120px;
+    z-index: 0;
+
+}
+
+.logo_txt {
+
+    position: absolute;
+    margin-top: 194px;
+    z-index: 10;
+
+}
+
+.practice_text {
+
+    margin-top: 430px;
+
+}
+
+/* 따옴표 텍스트 div 클래스 */
+
+.quotes_div {
+
+    position: absolute;
+    width: 493px;
+    height: 96px;
+    margin-top: 562px;
+
+}
+
+.quotes_div .first {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    font-size: 96px;
+
+}
+
+.quotes_div .second {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: 700;
+    font-size: 96px;
+
+}
+
+.practice_explanation_text {
+
+    margin-top: 78px;
+    line-height: 24px;
+    text-align: center;
+
+}
+
+/* 굵기, 크기가 다르기 때문에 클래스 생성 */
+
+.practice_explanation_text .timeRule_span {
+
+    font-weight: 700;
+    font-size: 24px;
+
+}
+
+/* 직업 입력 input div */
+
+.input_job_div {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 102px;
+    font-size: 24px;
+
+}
+
+/* 시간 입력 input div */
+
+.input_time_div {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 27px;
+    font-size: 24px;
+
+}
+
+/* input 크기 자동 정렬로 인한 크기 재설정 */
+
+input {
+
+    width: 228px;
+    height: 57px;
+
+}
+
+/* 버튼 이미지로 퍼와서 하는게 안되나? */
+.calc_time_button {
+
+    width: 565px;
+    height: 66px;
+    margin-top: 115px;
+    background-color: #FCEE21;
+    border-radius: 56px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5B2386;
+
+
+}
+
+/* 결과창 div */
+
+.result_job_div {
+
+    margin-top: 147px;
+    font-size: 24px;
+
+}
+
+.result_time_div {
+
+    margin-top: 17px;
+    font-size: 24px;
+
+}
+
+.result_job_div .strong_text {
+
+    font-size: 72px;
+    font-weight: 700;
+
+}
+
+.result_time_div .strong_text {
+
+    font-size: 72px;
+    font-weight: 700;
+
+}
+
+/* 훈련하러 가기, 공유하기 버튼 */
+
+.practice_share_button_section {
+
+    display: flex;
+    height: 66px;
+    margin-top: 127px;
+
+}
+
+.going_practice_button {
+
+    width: 356px;
+    background-color: #FCEE21;
+    border-radius: 56px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5B2386;
+
+}
+
+.share_button {
+
+    width: 191px;
+    background-color: white;
+    border-radius: 56px;
+    margin-left: 18px;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+/* 위니브 footer 로고 */
+
+.weniv_footer_logo {
+
+    text-align: center;
+    margin-top: 130px;
+
+}
+
+.law_text {
+
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+
+}
+
