@@ -15,6 +15,7 @@
 
             width: 350px;
             height: 140px;
+            margin: 6px;
             border: 1px #DBDBDB solid;
             border-radius: 4px;
 
@@ -36,9 +37,12 @@
             width: 318px;
             height: 40px;
             margin: 16px 16px 16px 16px; /* p와 마진 중첩 */
+
+            /* 이 세개를 안쓰고 해보고 싶다. */
             display: flex;
             justify-content: center;
             align-items: center;
+
             background-color: #711BFF;
             border-radius: 4px;
 
@@ -67,6 +71,7 @@
         /* 아이디, 비밀번호 찾기 div */
         div.id_pw_div {
 
+            display: inline;
             width: 133px;
             height: 16px;
             margin: 16px 120px 18px 16px;
@@ -91,9 +96,9 @@
         /* 회원가입 div */
         div.signup_div {
 
+            display: inline;
             width: 65px;
             height: 16px;
-            margin: 2px 16px 18px 120px;
             border: 0;
 
         }
@@ -102,12 +107,14 @@
 
             width: 16px;
             height: 16px;
+            vertical-align: bottom;
 
         }
 
         div.signup_div span {
 
             font-size: 12px;
+            vertical-align: bottom;
 
         }
 
