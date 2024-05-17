@@ -1,0 +1,36 @@
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+main section {
+
+    display: flex;
+    align-items: center;
+    margin-top: 80px; /* 아닌거 같은데? 고정 값으로 하는거 맞음?*/
+
+}
+
+main section .main_cat_img {
+
+    margin-right: 110px; /* 아닌거 같은데? 고정 값으로 하는거 맞음?*/
+
+}
+
+/*  */
+main .LoremIpsum_bold {
+
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    margin-bottom: 30px; /* 아닌거 같은데? 고정 값으로 하는거 맞음?*/
+
+}
+
+main .LoremIpsum_normal {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+
+}
