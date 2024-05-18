@@ -1,9 +1,13 @@
+/* 반응형 레이아웃 구현 : https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Responsive_Design */
+
 main {
     padding-left: 10%;
     padding-right: 10%;
 }
 
-main section {
+/* main 고양이 큰 사진 section */
+
+main .main_cat_section{
 
     display: flex;
     align-items: center;
@@ -11,14 +15,15 @@ main section {
 
 }
 
-main section .main_cat_img {
+main .main_cat_img {
 
     margin-right: 110px; /* 아닌거 같은데? 고정 값으로 하는거 맞음?*/
 
 }
 
-/*  */
-main .LoremIpsum_bold {
+
+/* 이거 맞나? 상속이*/
+main .main_cat_section .LoremIpsum_bold {
 
     font-size: 36px;
     font-weight: 700;
@@ -27,10 +32,103 @@ main .LoremIpsum_bold {
 
 }
 
-main .LoremIpsum_normal {
+main .main_cat_section .LoremIpsum_normal {
 
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
 
+}
+
+/* main text section */
+/* 일단 다 flex로 덮어본다? */
+
+main .main_text_section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* 이거 이렇게 하는게 아니라 h2 같은데? */
+main .main_text_section .LoremIpsum_bold {
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    color: #D97652;
+
+}
+
+main .main_text_section .LoremIpsum_normal {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+
+}
+
+main .main_text_section span {
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #D97652;
+
+}
+
+/* 고양이 이미지 리스트 section */
+
+/* 이거 맞나? */
+.main_cat_imageList_section {
+
+    display: flex;
+
+}
+
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.image-item {
+    width: calc(33.33% - 20px); /* 3열로 나누기, 간격은 여기서 20px로 설정 */
+    float: left; /* 가로로 정렬 */
+    margin: 10px; /* 이미지 사이의 간격을 조절 */
+    box-sizing: border-box; /* 요소의 너비와 높이에 padding과 border를 포함 */
+}
+
+.image-item img {
+    width: 100%; /* 이미지를 부모 요소에 꽉 채우기 */
+    height: auto; /* 비율을 유지한 채 이미지의 높이 조절 */
+}
+
+.showMore_section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.showMore_section > p {
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+
+}
+
+/* 중간 회색 가로선 */
+.horizontal_gray_line {
+    width: 100%; /* 수평선이 화면 전체 너비를 차지하도록 설정 */
+    height: 1px; /* 수평선의 높이를 1px로 설정 */
+    background-color: #C4C4C4; /* 회색으로 선을 설정 */
+    margin-top: 80px;
 }

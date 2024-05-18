@@ -1,7 +1,10 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!doctype html>
+<html lang="ㅏㅐ">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Figma</title>
 
     <!-- CSS로 옮긴다? -->
@@ -19,6 +22,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
 <header>
 
     <nav>
@@ -57,16 +61,57 @@
 
 <main>
 
-    <section>
+    <section class="main_cat_section">
 
         <img src="cat_main.png" class="main_cat_img" alt="누워있는 고양이">
 
-        <div class="main_section_text_container">
+        <!-- 여기 flex로 두고 반응형으로? -->
+        <div>
             <p class="LoremIpsum_bold">Lorem Ipsum is simply dummy text of the printing and dummy text</p>
             <p class="LoremIpsum_normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
         </div>
 
     </section>
+
+    <section class="main_text_section">
+
+        <p class="LoremIpsum_bold">dummy text of the printing and dummy</p>
+        <p class="LoremIpsum_normal">
+            Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.<br>
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.
+        </p>
+
+    </section>
+
+    <section class="main_cat_imageList_section">
+
+        <ul class="image_list">
+            <li class="image-item"><img src="cat_section_first.png" alt="고양이 이미지"></li>
+            <li class="image-item"><img src="cat_section_second.png" alt="고양이 이미지"></li>
+            <li class="image-item"><img src="cat_section_third.png" alt="고양이 이미지"></li>
+            <li class="image-item"><img src="cat_section_fourth.png" alt="고양이 이미지"></li>
+            <li class="image-item"><img src="cat_section_fifth.png" alt="고양이 이미지"></li>
+            <li class="image-item"><img src="cat_section_sixth.png" alt="고양이 이미지"></li>
+        </ul>
+
+    </section>
+
+    <section class="showMore_section">
+
+        <p>Continue exploring HODU</p>
+
+        <button>Show more</button>
+
+    </section>
+
+    <div class="horizontal_gray_line"></div>
+
+    <section>
+
+        <h2>Where you'll be</h2>
+
+    </section>
+
 
 </main>
 
@@ -75,4 +120,3 @@
 </footer>
 
 </body>
-</html>
