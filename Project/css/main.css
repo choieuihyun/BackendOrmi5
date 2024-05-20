@@ -267,6 +267,6 @@ main .hover_button {
     margin: 0 20px 20px 0;
     border: none;
     border-radius: 50%; /* Figma에선 다르게 되어있던데 모르겠다 */
-    background-image: url('hover-button-arrow-up.svg');
+    background-image: url('../resources/hover-button-arrow-up.svg');
 
 }

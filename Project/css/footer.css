@@ -1,0 +1,18 @@
+footer {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+footer nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0; /* 고정값은 지양하도록 구현해보고 싶다. */
+
+}
+
+footer ul {
+    display: flex;
+    gap: 20px;
+}

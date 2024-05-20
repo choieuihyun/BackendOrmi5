@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ㅏㅐ">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,6 +8,10 @@
     <title>Figma</title>
 
     <!-- CSS로 옮긴다? -->
+    <!-- 이미지명, 클래스명 네이밍 기준 : 태그_이미지_순서 or 이미지_태그_순서 둘 중 하나로 통일 후 리팩토링. -->
+    <!-- _div 이런거 말고 _container라는 좋은 명칭이 있음 -->
+    <!-- 고정값은 지양하면서 해보자 -->
+    <!-- flex를 사용하지 않아도 되는 부분이 있더라. 의심스러우면 지워보면서 비교 -->
     <style>
 
         * {
@@ -18,26 +22,29 @@
 
     </style>
 
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
 
 <header>
 
     <nav>
-        <h1>HODU</h1>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Support</li>
-            <li>
-                <button>Download</button>
-            </li> <!-- 일단 이렇게 했는데 li에서 나오는 구조가 맞아보임. -->
-        </ul>
+        <div class="nav_logo_ul_container">
+            <img src="resources/header-hodu-logo.svg" alt="헤더 호두 로고">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Support</li>
+            </ul>
+
+        </div>
+        <button class="nav_download_button">Download</button>
     </nav>
 
-    <section>
+    <section> <!-- 이 section이 필요한가? -->
 
         <div class="LoremIpsum_div">
 
@@ -53,7 +60,7 @@
 
         </div>
 
-        <img src="header_cat.png" alt="박스 뒤집어쓴 고양이 이미지">
+        <img src="resources/header-cat.png" class="header_cat_img" alt="박스 뒤집어쓴 고양이 이미지">
 
     </section>
 
@@ -61,62 +68,127 @@
 
 <main>
 
-    <section class="main_cat_section">
+    <!-- 화면 아래의 올려다보는 고양이 사진은 main안에 들어가야 한다고 판단. -->
+    <!-- 화면 아래의 올려다보는 고양이 사진 크기 조절을 위해 main_container div 구현 -->
+    <div class="main_container">
 
-        <img src="cat_main.png" class="main_cat_img" alt="누워있는 고양이">
+        <section class="main_cat_section">
 
-        <!-- 여기 flex로 두고 반응형으로? -->
-        <div>
-            <p class="LoremIpsum_bold">Lorem Ipsum is simply dummy text of the printing and dummy text</p>
-            <p class="LoremIpsum_normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <!-- 화면이 줄어들어도 이 이미지는 줄어들지 않는 에러 -->
+            <img src="resources/cat-main.png" class="main_cat_img" alt="누워있는 고양이">
+
+            <!-- 여기 flex로 두고 반응형으로? -->
+            <div>
+                <p class="LoremIpsum_bold">Lorem Ipsum is simply dummy text of the printing and dummy text</p>
+                <p class="LoremIpsum_normal">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. </p>
+            </div>
+
+        </section>
+
+        <section class="main_text_section">
+
+            <p class="LoremIpsum_bold">dummy text of the printing and dummy</p>
+            <p class="LoremIpsum_normal">
+                Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.
+            </p>
+
+        </section>
+
+        <section class="main_cat_imageList_section">
+
+            <ul class="image_list">
+                <li class="image-item"><img src="resources/cat-section-first.png" alt="고양이 이미지"></li>
+                <li class="image-item"><img src="resources/cat-section-second.png" alt="고양이 이미지"></li>
+                <li class="image-item"><img src="resources/cat-section-third.png" alt="고양이 이미지"></li>
+                <li class="image-item"><img src="resources/cat-section-fourth.png" alt="고양이 이미지"></li>
+                <li class="image-item"><img src="resources/cat-section-fifth.png" alt="고양이 이미지"></li>
+                <li class="image-item"><img src="resources/cat-section-sixth.png" alt="고양이 이미지"></li>
+            </ul>
+
+        </section>
+
+        <section class="showMore_section">
+
+            <p>Continue exploring HODU</p>
+
+            <button>Show more</button>
+
+        </section>
+
+        <div class="horizontal_gray_line"></div>
+
+        <section>
+
+            <h2>Where you'll be</h2>
+
+            <p>아마도 위치 정보 데이터</p>
+
+            <div class="main_map"></div>
+
+        </section>
+
+        <article class="subscribe_article">
+
+            <div class="subscribe_article_position_container">
+
+                <div class="subscribe_text_container">
+                    <p class="LoremIpsum_bold">Subscribe to our Blog post</p>
+                    <p class="LoremIpsum_normal">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text
+                    </p>
+                </div>
+
+                <div class="address_input_container">
+                    <img src="resources/icon-mail.svg" alt="메일 아이콘"/>
+                    <input type="text" id="address" name="address" placeholder="Enter your e-mail address">
+                    <button class="modal_button">Subscribe</button>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <div class="cat_main_bottom_container">
+
+        <img src="resources/cat-main-bottom.png" class="main_bottom_cat" alt="올려다보는 고양이 이미지"/>
+
+        <button class="hover_button"></button>
+
+    </div>
+
+    <div class="modal">
+        <div class="modal_popup">
+            <h3>모달 팝업 타이틀 입니다!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ut facere id ullam ea adipisci et ipsam est quidem commodi ducimus nostrum cum optio non dolor! Quam ipsum nam rem!</p>
+            <button type="button" class="close_btn">닫기</button>
         </div>
-
-    </section>
-
-    <section class="main_text_section">
-
-        <p class="LoremIpsum_bold">dummy text of the printing and dummy</p>
-        <p class="LoremIpsum_normal">
-            Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.<br>
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.
-        </p>
-
-    </section>
-
-    <section class="main_cat_imageList_section">
-
-        <ul class="image_list">
-            <li class="image-item"><img src="cat_section_first.png" alt="고양이 이미지"></li>
-            <li class="image-item"><img src="cat_section_second.png" alt="고양이 이미지"></li>
-            <li class="image-item"><img src="cat_section_third.png" alt="고양이 이미지"></li>
-            <li class="image-item"><img src="cat_section_fourth.png" alt="고양이 이미지"></li>
-            <li class="image-item"><img src="cat_section_fifth.png" alt="고양이 이미지"></li>
-            <li class="image-item"><img src="cat_section_sixth.png" alt="고양이 이미지"></li>
-        </ul>
-
-    </section>
-
-    <section class="showMore_section">
-
-        <p>Continue exploring HODU</p>
-
-        <button>Show more</button>
-
-    </section>
-
-    <div class="horizontal_gray_line"></div>
-
-    <section>
-
-        <h2>Where you'll be</h2>
-
-    </section>
-
+    </div>
 
 </main>
 
 <footer>
 
+    <nav>
+        <img src="resources/footer-hodu-logo.png" alt="푸터 호두 로고">
+        <ul>
+            <li><img src="resources/icon-blog.png" alt="블로그 아이콘"></li>
+            <li><img src="resources/icon-insta.png" alt="인스타그램 아이콘"></li>
+            <li><img src="resources/icon-facebook.png" alt="페이스북 아이콘"></li>
+            <li><img src="resources/icon-youtube.png" alt="유튜브 아이콘"></li>
+        </ul>
+    </nav>
+
 </footer>
 
+<script src="js/modal.js"></script>
+
+
+
 </body>
+
+</html>
