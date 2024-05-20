@@ -1,0 +1,272 @@
+/* 반응형 레이아웃 구현 : https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Responsive_Design */
+
+main .main_container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* main 고양이 큰 사진 section */
+
+main .main_cat_section {
+
+    display: flex;
+    align-items: center;
+    margin-top: 80px; /* 아닌거 같은데? 고정 값으로 하는거 맞음?*/
+
+}
+
+main .main_cat_img {
+
+    margin-right: 110px; /* 아닌거 같은데? 고정 값으로 하는거 맞음?*/
+
+}
+
+
+/* 이거 맞나? 상속이*/
+main .main_cat_section .LoremIpsum_bold {
+
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    margin-bottom: 30px; /* 아닌거 같은데? 고정 값으로 하는거 맞음?*/
+
+}
+
+main .main_cat_section .LoremIpsum_normal {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+
+}
+
+/* main text section */
+/* 일단 다 flex로 덮어본다? */
+
+main .main_text_section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* 이거 이렇게 하는게 아니라 h2 같은데? */
+main .main_text_section .LoremIpsum_bold {
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    color: #D97652;
+
+}
+
+main .main_text_section .LoremIpsum_normal {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+
+}
+
+main .main_text_section span {
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #D97652;
+
+}
+
+/* 고양이 이미지 리스트 section */
+
+/* 이거 맞나? */
+.main_cat_imageList_section {
+
+    display: flex;
+
+}
+
+main .image-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+main .image-item {
+    width: calc(33.33% - 20px); /* 3열로 나누기, 간격은 여기서 20px로 설정 */
+    float: left; /* 가로로 정렬 */
+    margin: 10px; /* 이미지 사이의 간격을 조절 */
+    box-sizing: border-box; /* 요소의 너비와 높이에 padding과 border를 포함 */
+}
+
+main .image-item img {
+    width: 100%; /* 이미지를 부모 요소에 꽉 채우기 */
+    height: auto; /* 비율을 유지한 채 이미지의 높이 조절 */
+}
+
+main .showMore_section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main .showMore_section p {
+
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+
+}
+
+main .showMore_section button {
+
+    width: 140px;
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    background-color: #D97652;
+
+}
+
+/* 중간 회색 가로선 */
+main .horizontal_gray_line {
+    width: 100%; /* 수평선이 화면 전체 너비를 차지하도록 설정 */
+    height: 1px; /* 수평선의 높이를 1px로 설정 */
+    background-color: #C4C4C4; /* 회색으로 선을 설정 */
+    margin-top: 80px;
+}
+
+/* 옆 여백이 안사라지는데? */
+main section .main_map {
+
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    box-sizing: border-box;
+
+}
+
+
+main .subscribe_article {
+
+    position: relative; /* 위치 조정을 위한 position */
+
+}
+
+main .subscribe_article_position_container {
+
+    position: absolute; /* 부모를 기준으로 절대 위치 설정 */
+    top: 80px; /* 이거 값 기준을 뭘로 해야하지? */
+    display: flex;
+    border-radius: 30px;
+    background-color: #263140;
+}
+
+main .subscribe_text_container {
+    flex: 1;               /* 각 자식 요소에 동일한 flex 값 적용 */
+    margin: 50px;
+}
+
+main .subscribe_text_container .LoremIpsum_bold {
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: white;
+
+}
+
+main .subscribe_text_container .LoremIpsum_normal {
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: white;
+
+}
+
+main .address_input_container {
+
+    position: relative; /* 버튼 제어용 position */
+    flex: 1;               /* 각 자식 요소에 동일한 flex 값 적용 */
+    display: flex;         /* 자식 요소 내에서 중앙 정렬 */
+    align-items: center;
+    margin: 50px;
+
+}
+
+
+main .address_input_container img {
+
+    position: absolute;
+    left: 28px; /* 맞는 건지 모르겠다 */
+
+}
+
+main .address_input_container input {
+
+    width: 100%;
+    height: 60px;
+    border-radius: 60px;
+    padding-left: 68px; /* 맞는 건지 모르겠다 */
+    margin: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+
+}
+
+main .address_input_container button {
+
+    /* 고정값 사용이 있어도 되는지 모르겠다 */
+    position: absolute;
+    width: 140px;
+    height: 50px;
+    right: 10px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    background-color: #D97652;
+    z-index: 0;
+
+}
+
+/* 아래에 큰 고양이 */
+
+main .cat_main_bottom_container {
+    /* hover 버튼 배치를 위한 flex 속성 */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 180px;
+}
+
+main .main_bottom_cat {
+
+    width: 100%; /* 화면에 딱 맞추기 위한 속성 */
+
+}
+
+main .hover_button {
+
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 0 20px 20px 0;
+    border: none;
+    border-radius: 50%; /* Figma에선 다르게 되어있던데 모르겠다 */
+    background-image: url('hover-button-arrow-up.svg');
+
+}

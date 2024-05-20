@@ -1,0 +1,78 @@
+header {
+    background-color: #F2E9D8;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* header button 디자인 동일 */
+/*
+    화면 전체의 버튼 디자인이 동일하긴 한데 전역 범위로 설정해두면 다른 버튼 추가 시 유연하지 못하다고 판단.
+    그래서 일단 header, main, footer 따로 설정.
+*/
+
+header button {
+
+    width: 140px;
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    background-color: #D97652;
+
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 0;
+}
+
+header nav .nav_logo_ul_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /*
+    margin이나 padding을 사용하여 간격을 두려하면 버튼의 크기가 줄어들게 됨.
+    190 == button 크기 + button과 ul의 간격
+    */
+    width: calc(100% - 190px); /* 버튼의 너비 + ul과 버튼의 간격을 제외한 나머지 영역을 할당. */
+
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header section {
+    display: flex;
+    align-items: center;
+}
+
+header .header_cat_img {
+    width: 400px;
+    height: auto;
+}
+
+/* 폰트 종류는 통합으로 써도 되겠는데? */
+header .LoremIpsum_bold {
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 40px;
+
+}
+
+header .LoremIpsum_normal {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 40px;
+
+}
