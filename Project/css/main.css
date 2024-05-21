@@ -90,12 +90,13 @@ main .main_text_section span {
 
 }
 
-main .image-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-}
+/* 이거 안쓰이는데? */
+/*main .image-list {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
 
 main .image-item {
     width: calc(33.33% - 20px); /* 3열로 나누기, 간격은 여기서 20px로 설정 */
@@ -108,6 +109,11 @@ main .image-item img {
     width: 100%; /* 이미지를 부모 요소에 꽉 채우기 */
     height: auto; /* 비율을 유지한 채 이미지의 높이 조절 */
 }
+
+main .image-item .hidden_image {
+    display: none;
+}
+
 
 main .showMore_section {
 
