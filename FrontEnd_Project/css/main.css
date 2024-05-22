@@ -1,8 +1,9 @@
 /* 반응형 레이아웃 구현 : https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Responsive_Design */
+/* flex 사용 이유에 대해 명확히 정의할 줄 알아야함 */
 
 main .main_container {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 /* main 고양이 큰 사진 section */
@@ -11,13 +12,15 @@ main .main_cat_section {
 
     display: flex;
     align-items: center;
-    margin-top: 80px; /* 아닌거 같은데? 고정 값으로 하는거 맞음?*/
+    width: 100%;
+    margin-top: 80px; /* 아닌거 같은데? 고정 값으로 하는거 맞음? */
 
 }
 
 main .main_cat_img {
 
-    margin-right: 110px; /* 아닌거 같은데? 고정 값으로 하는거 맞음?*/
+    width: 50%;
+    margin-right: 110px; /* 아닌거 같은데? 고정 값으로 하는거 맞음? */
 
 }
 
@@ -101,8 +104,8 @@ main .main_text_section span {
 main .image-item {
     width: calc(33.33% - 20px); /* 3열로 나누기, 간격은 여기서 20px로 설정 */
     float: left; /* 가로로 정렬 */
-    margin: 10px; /* 이미지 사이의 간격을 조절 */
-    box-sizing: border-box; /* 요소의 너비와 높이에 padding과 border를 포함 */
+    margin: 10px;
+    box-sizing: border-box;
 }
 
 main .image-item img {
@@ -150,14 +153,40 @@ main .horizontal_gray_line {
     height: 1px; /* 수평선의 높이를 1px로 설정 */
     background-color: #C4C4C4; /* 회색으로 선을 설정 */
     margin-top: 80px;
+    margin-bottom: 68px;
 }
 
-/* 옆 여백이 안사라지는데? */
-main section .main_map {
+main .map_container {
+
+    /*width: 896px;*/
+
+}
+
+/* map container */
+main .map_container h2 {
+
+    text-align: left;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+
+}
+
+main .map_container p {
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 48px;
+    text-align: left;
+
+}
+
+main .map_container .map {
 
     width: 100%;
     height: 400px;
-    background-color: black;
     box-sizing: border-box;
 
 }
@@ -166,20 +195,21 @@ main section .main_map {
 main .subscribe_article {
 
     position: relative; /* 위치 조정을 위한 position */
+    top: 80px; /* 이거 값 기준을 뭘로 해야하지? */
 
 }
 
 main .subscribe_article_position_container {
 
     position: absolute; /* 부모를 기준으로 절대 위치 설정 */
-    top: 80px; /* 이거 값 기준을 뭘로 해야하지? */
     display: flex;
+    min-height: 200px;
     border-radius: 30px;
     background-color: #263140;
 }
 
 main .subscribe_text_container {
-    flex: 1;               /* 각 자식 요소에 동일한 flex 값 적용 */
+    flex: 1; /* 각 자식 요소에 동일한 flex 값 적용 */
     margin: 50px;
 }
 
@@ -252,6 +282,7 @@ main .address_input_container button {
 /* 아래에 큰 고양이 */
 
 main .cat_main_bottom_container {
+
     /* hover 버튼 배치를 위한 flex 속성 */
     display: flex;
     justify-content: flex-end;

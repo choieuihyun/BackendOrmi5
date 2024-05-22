@@ -32,16 +32,17 @@
 <header>
 
     <nav>
-        <div class="nav_logo_ul_container">
-            <img src="resources/header-hodu-logo.svg" alt="헤더 호두 로고">
+        <img src="resources/header-hodu-logo.svg" alt="헤더 호두 로고">
+        <div class="nav_container">
             <ul>
                 <li>Home</li>
                 <li>About</li>
                 <li>Support</li>
             </ul>
 
+            <button class="nav_download_button">Download</button>
         </div>
-        <button class="nav_download_button">Download</button>
+
     </nav>
 
     <section> <!-- 이 section이 필요한가? -->
@@ -77,8 +78,7 @@
             <!-- 화면이 줄어들어도 이 이미지는 줄어들지 않는 에러 -->
             <img src="resources/cat-main.png" class="main_cat_img" alt="누워있는 고양이">
 
-            <!-- 여기 flex로 두고 반응형으로? -->
-            <div>
+            <div class="main_cat_section_p_container">
                 <p class="LoremIpsum_bold">Lorem Ipsum is simply dummy text of the printing and dummy text</p>
                 <p class="LoremIpsum_normal">Lorem Ipsum is simply dummy text of the printing and typesetting
                     industry. </p>
@@ -98,7 +98,8 @@
 
         <section class="main_cat_imageList_section">
 
-        <!--추가로 로드할 이미지는 class="hidden"으로 숨김.-->
+            <!-- 추가로 로드할 이미지는 class="hidden"으로 숨김.-->
+            <!-- 이 방법도 있고 버튼을 누르면 생성하는 게 원래는 정배겠네 -->
             <ul class="image_list_container">
                 <li class="image-item"><img src="resources/cat-section-first.png" alt="고양이 이미지"></li>
                 <li class="image-item"><img src="resources/cat-section-second.png" alt="고양이 이미지"></li>
@@ -106,12 +107,18 @@
                 <li class="image-item"><img src="resources/cat-section-fourth.png" alt="고양이 이미지"></li>
                 <li class="image-item"><img src="resources/cat-section-fifth.png" alt="고양이 이미지"></li>
                 <li class="image-item"><img src="resources/cat-section-sixth.png" alt="고양이 이미지"></li>
-                <li class="image-item"><img src="resources/cat-section-fourth.png" alt="고양이 이미지" class="hidden_image"></li>
-                <li class="image-item"><img src="resources/cat-section-fifth.png" alt="고양이 이미지" class="hidden_image"></li>
-                <li class="image-item"><img src="resources/cat-section-sixth.png" alt="고양이 이미지" class="hidden_image"></li>
-                <li class="image-item"><img src="resources/cat-section-fourth.png" alt="고양이 이미지" class="hidden_image"></li>
-                <li class="image-item"><img src="resources/cat-section-fifth.png" alt="고양이 이미지" class="hidden_image"></li>
-                <li class="image-item"><img src="resources/cat-section-sixth.png" alt="고양이 이미지" class="hidden_image"></li>
+                <li class="image-item"><img src="resources/cat-section-fourth.png" alt="고양이 이미지" class="hidden_image">
+                </li>
+                <li class="image-item"><img src="resources/cat-section-fifth.png" alt="고양이 이미지" class="hidden_image">
+                </li>
+                <li class="image-item"><img src="resources/cat-section-sixth.png" alt="고양이 이미지" class="hidden_image">
+                </li>
+                <li class="image-item"><img src="resources/cat-section-fourth.png" alt="고양이 이미지" class="hidden_image">
+                </li>
+                <li class="image-item"><img src="resources/cat-section-fifth.png" alt="고양이 이미지" class="hidden_image">
+                </li>
+                <li class="image-item"><img src="resources/cat-section-sixth.png" alt="고양이 이미지" class="hidden_image">
+                </li>
             </ul>
 
         </section>
@@ -126,13 +133,16 @@
 
         <div class="horizontal_gray_line"></div>
 
-        <section>
+        <section class="map_container">
 
             <h2>Where you'll be</h2>
 
-            <p>아마도 위치 정보 데이터</p>
+            <p>330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
 
-            <div class="main_map"></div>
+            <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.2669553657674!2d126.5688745110392!3d33.44235084957746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfdb22ad3cce3%3A0x1321aebb880d1b1!2z7KCc7KO87Yq567OE7J6Q7LmY64-EIOygnOyjvOyLnCDssqjri6jroZwgMzMw!5e0!3m2!1sko!2skr!4v1716341548756!5m2!1sko!2skr"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </section>
 
@@ -167,14 +177,6 @@
         <button class="hover_button"></button>
 
     </div>
-
-<!--    <div class="modal">-->
-<!--        <div class="modal_popup">-->
-<!--            <h3>모달 팝업 타이틀 입니다!</h3>-->
-<!--            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ut facere id ullam ea adipisci et ipsam est quidem commodi ducimus nostrum cum optio non dolor! Quam ipsum nam rem!</p>-->
-<!--            <button type="button" class="close_btn">닫기</button>-->
-<!--        </div>-->
-<!--    </div>-->
 
 </main>
 
