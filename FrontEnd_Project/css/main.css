@@ -1,14 +1,14 @@
 /* 반응형 레이아웃 구현 : https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Responsive_Design */
 /* flex 사용 이유에 대해 명확히 정의할 줄 알아야함 */
 
-main .main_container {
+main .main-container {
     padding-left: 15%;
     padding-right: 15%;
 }
 
 /* main 고양이 큰 사진 section */
 
-main .main_cat_section {
+main .main-section-cat {
 
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@ main .main_cat_section {
 
 }
 
-main .main_cat_img {
+main .main-cat-img {
 
     width: 50%;
     margin-right: 110px; /* 아닌거 같은데? 고정 값으로 하는거 맞음? */
@@ -26,7 +26,7 @@ main .main_cat_img {
 
 
 /* 이거 맞나? 상속이*/
-main .main_cat_section .LoremIpsum_bold {
+main .main-section-cat .loremIpsum-bold {
 
     font-size: 36px;
     font-weight: 700;
@@ -35,7 +35,7 @@ main .main_cat_section .LoremIpsum_bold {
 
 }
 
-main .main_cat_section .LoremIpsum_normal {
+main .main-section-cat .loremIpsum-normal {
 
     font-size: 16px;
     font-weight: 400;
@@ -46,16 +46,17 @@ main .main_cat_section .LoremIpsum_normal {
 /* main text section */
 /* 일단 다 flex로 덮어본다? */
 
-main .main_text_section {
+main .main-section-text {
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 88px;
 
 }
 
 /* 이거 이렇게 하는게 아니라 h2 같은데? */
-main .main_text_section .LoremIpsum_bold {
+main .main-section-text .loremIpsum-bold {
 
     font-size: 48px;
     font-weight: 700;
@@ -66,7 +67,7 @@ main .main_text_section .LoremIpsum_bold {
 
 }
 
-main .main_text_section .LoremIpsum_normal {
+main .main-section-text .loremIpsum-normal {
 
     font-size: 16px;
     font-weight: 400;
@@ -75,7 +76,7 @@ main .main_text_section .LoremIpsum_normal {
 
 }
 
-main .main_text_section span {
+main .main-section-text span {
 
     font-size: 16px;
     font-weight: 700;
@@ -87,46 +88,37 @@ main .main_text_section span {
 /* 고양이 이미지 리스트 section */
 
 /* 이거 맞나? */
-.main_cat_imageList_section {
+.image-list-cat {
 
     display: flex;
 
 }
 
-/* 이거 안쓰이는데? */
-/*main .image-list {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    padding: 0;*/
-/*    margin: 0;*/
-/*}*/
-
-main .image-item {
+/* 여긴 좀 있다가 바꾸자 */
+main .image-item, main .add-image-item {
     width: calc(33.33% - 20px); /* 3열로 나누기, 간격은 여기서 20px로 설정 */
     float: left; /* 가로로 정렬 */
     margin: 10px;
     box-sizing: border-box;
 }
 
-main .image-item img {
+/* 여긴 좀 있다가 바꾸자 */
+main .image-item img, main .add-image-item img {
     width: 100%; /* 이미지를 부모 요소에 꽉 채우기 */
-    height: auto; /* 비율을 유지한 채 이미지의 높이 조절 */
-}
-
-main .image-item .hidden_image {
-    display: none;
+    height: 200px; /* 비율을 유지한 채 이미지의 높이 조절 */
 }
 
 
-main .showMore_section {
+main .show-more {
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
 
 }
 
-main .showMore_section p {
+main .show-more p {
 
     font-size: 24px;
     font-weight: 700;
@@ -134,7 +126,7 @@ main .showMore_section p {
 
 }
 
-main .showMore_section button {
+main .show-more-button {
 
     width: 140px;
     height: 50px;
@@ -148,7 +140,7 @@ main .showMore_section button {
 }
 
 /* 중간 회색 가로선 */
-main .horizontal_gray_line {
+main .horizontal-gray-line {
     width: 100%; /* 수평선이 화면 전체 너비를 차지하도록 설정 */
     height: 1px; /* 수평선의 높이를 1px로 설정 */
     background-color: #C4C4C4; /* 회색으로 선을 설정 */
@@ -156,14 +148,14 @@ main .horizontal_gray_line {
     margin-bottom: 68px;
 }
 
-main .map_container {
+main .map {
 
     /*width: 896px;*/
 
 }
 
 /* map container */
-main .map_container h2 {
+main .map h2 {
 
     text-align: left;
     font-size: 36px;
@@ -172,7 +164,7 @@ main .map_container h2 {
 
 }
 
-main .map_container p {
+main .map p {
 
     font-size: 16px;
     font-weight: 500;
@@ -183,7 +175,7 @@ main .map_container p {
 
 }
 
-main .map_container .map {
+main .map .map-container {
 
     width: 100%;
     height: 400px;
@@ -192,29 +184,29 @@ main .map_container .map {
 }
 
 
-main .subscribe_article {
+main .subscribe {
 
     position: relative; /* 위치 조정을 위한 position */
     top: 80px; /* 이거 값 기준을 뭘로 해야하지? */
 
 }
 
-main .subscribe_article_position_container {
+main .subscribe-inner-container {
 
     position: absolute; /* 부모를 기준으로 절대 위치 설정 */
     display: flex;
-    min-height: 200px;
     border-radius: 30px;
     background-color: #263140;
 }
 
-main .subscribe_text_container {
+main .subscribe-text-container {
     flex: 1; /* 각 자식 요소에 동일한 flex 값 적용 */
     margin: 50px;
 }
 
-main .subscribe_text_container .LoremIpsum_bold {
+main .subscribe-text-container .loremIpsum-bold {
 
+    margin-bottom: 18px;
     font-weight: 700;
     font-size: 36px;
     line-height: 45px;
@@ -222,7 +214,7 @@ main .subscribe_text_container .LoremIpsum_bold {
 
 }
 
-main .subscribe_text_container .LoremIpsum_normal {
+main .subscribe-text-container .loremIpsum-normal {
 
     font-weight: 400;
     font-size: 14px;
@@ -231,7 +223,7 @@ main .subscribe_text_container .LoremIpsum_normal {
 
 }
 
-main .address_input_container {
+main .subscribe-input-container {
 
     position: relative; /* 버튼 제어용 position */
     flex: 1;               /* 각 자식 요소에 동일한 flex 값 적용 */
@@ -242,14 +234,14 @@ main .address_input_container {
 }
 
 
-main .address_input_container img {
+main .subscribe-input-container img {
 
     position: absolute;
     left: 28px; /* 맞는 건지 모르겠다 */
 
 }
 
-main .address_input_container input {
+main .subscribe-input-container input {
 
     width: 100%;
     height: 60px;
@@ -262,7 +254,7 @@ main .address_input_container input {
 
 }
 
-main .address_input_container button {
+main .subscribe-input-container button {
 
     /* 고정값 사용이 있어도 되는지 모르겠다 */
     position: absolute;
@@ -281,7 +273,7 @@ main .address_input_container button {
 
 /* 아래에 큰 고양이 */
 
-main .cat_main_bottom_container {
+main .bottom-cat-container {
 
     /* hover 버튼 배치를 위한 flex 속성 */
     display: flex;
@@ -290,20 +282,34 @@ main .cat_main_bottom_container {
     margin-top: 180px;
 }
 
-main .main_bottom_cat {
+main .bottom-cat {
 
     width: 100%; /* 화면에 딱 맞추기 위한 속성 */
 
 }
 
-main .hover_button {
+main .hover-button {
 
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    margin: 0 20px 20px 0;
+    border: none;
+    opacity: 0.5;
+    border-radius: 50%; /* Figma에선 다르게 되어있던데 모르겠다 */
+    background-image: url('../resources/hover-button-arrow-up.png');
+
+}
+
+main .hover-button:hover {
+
+    position: absolute;
+    width: 50px;
+    height: 50px;
     margin: 0 20px 20px 0;
     border: none;
     border-radius: 50%; /* Figma에선 다르게 되어있던데 모르겠다 */
-    background-image: url('../resources/hover-button-arrow-up.svg');
+    opacity: 1;
+    background-image: url('../resources/hover-button-arrow-up.png');
 
 }

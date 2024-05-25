@@ -4,12 +4,6 @@ header {
     padding-right: 15%;
 }
 
-/* header button 디자인 동일 */
-/*
-    화면 전체의 버튼 디자인이 동일하긴 한데 전역 범위로 설정해두면 다른 버튼 추가 시 유연하지 못하다고 판단.
-    그래서 일단 header, main, footer 따로 설정.
-*/
-
 header button {
 
     width: 140px;
@@ -30,7 +24,7 @@ header nav {
     padding: 26px 0;
 }
 
-.nav_container {
+.nav-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -43,7 +37,7 @@ header nav {
 
 }
 
-.nav_container button {
+.nav-container button {
     margin-left: 50px;
 }
 
@@ -59,21 +53,20 @@ header section {
 
 }
 
-header .header_cat_img {
+header .header-cat-img {
     width: 30%;
     height: auto;
 }
 
-header .LoremIpsum_div {
+header .LoremIpsum-div {
 
     /* 이렇게 width로 하는 것과 margin으로 설정하는 것중 어느것? */
     width: 60%;
 
-
 }
 
 /* 폰트 종류는 통합으로 써도 되겠는데? */
-header .LoremIpsum_bold {
+header .loremIpsum-bold {
 
     font-size: 48px;
     font-weight: 700;
@@ -82,7 +75,7 @@ header .LoremIpsum_bold {
 
 }
 
-header .LoremIpsum_normal {
+header .loremIpsum-normal {
 
     font-size: 16px;
     font-weight: 400;

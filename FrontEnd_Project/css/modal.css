@@ -15,6 +15,7 @@
     height: 100vh; /* viewPort 꽉 채우기 */
     overflow: hidden;
     background: rgba(0,0,0,0.5);
+    z-index: 99;
 }
 
 .modal_popup {
@@ -31,6 +32,7 @@
     padding: 20px;
     background-image: url("../resources/modal-background-img.png");
     border-radius: 20px;
+    z-index: 100;
 
 }
 
