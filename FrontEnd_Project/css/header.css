@@ -1,9 +1,18 @@
+/*
+    구현 요소가 많지 않아 명시적으로 표시하기 위해
+    동일한 속성을 갖는 요소를 제외하고는 .class .class로 선택자를 생성함.
+ */
+
+/* 헤더 전체 범위 설정 */
 header {
+
     background-color: #F2E9D8;
     padding-left: 15%;
     padding-right: 15%;
+
 }
 
+/* 헤더 버튼 속성 동일 */
 header button {
 
     width: 140px;
@@ -17,14 +26,16 @@ header button {
 
 }
 
+/* 헤더 navigation */
+.header-nav {
 
-header nav {
     display: flex;
-    /*justify-content: space-between;*/
     padding: 26px 0;
+
 }
 
-.nav-container {
+.header-nav .nav-container {
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -37,36 +48,36 @@ header nav {
 
 }
 
-.nav-container button {
+.header-nav .nav-container button {
+
     margin-left: 50px;
+
 }
 
-header nav ul {
+.header-nav .nav-container ul {
+
     display: flex;
     gap: 30px;
+
 }
 
-header section {
+/* 헤더 content */
+.header-section-content {
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
 }
 
-header .header-cat-img {
-    width: 30%;
-    height: auto;
-}
 
-header .LoremIpsum-div {
+.header-section-content .header-cat-img {
 
-    /* 이렇게 width로 하는 것과 margin으로 설정하는 것중 어느것? */
-    width: 60%;
+    width: 40%;
 
 }
 
 /* 폰트 종류는 통합으로 써도 되겠는데? */
-header .loremIpsum-bold {
+.header-section-content .loremIpsum-bold {
 
     font-size: 48px;
     font-weight: 700;
@@ -75,7 +86,7 @@ header .loremIpsum-bold {
 
 }
 
-header .loremIpsum-normal {
+.header-section-content .loremIpsum-normal {
 
     font-size: 16px;
     font-weight: 400;
